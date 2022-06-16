@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+
 public class Menu {
     public static void main(String[] args)
             throws java.io.IOException {
@@ -14,23 +16,26 @@ public class Menu {
             choice = (char) System.in.read();
         } while( choice < '1' || choice > '5');
 
-        System.out.println("\n");
+       // System.out.println("\n");
 
         switch(choice) {
             case '1':
-                PersonalAccount js=new PersonalAccount("Jon Smith",010506,87654321,0.00);
-                System.out.println("You have Selected "+js.getName());
 
-                        do {
-                            System.out.println("Choose an Account to Manage for Mr. "+js.getName());
-                            System.out.println("  1. Personal Account");
-                            System.out.println("  2. Business Account");
-                            System.out.println("  3. ISA Account");
 
-                            choice = (char) System.in.read();
-                        } while( choice < '1' || choice > '3');
+                do {
+                    PersonalAccount js=new PersonalAccount("Jon Smith",010506,87654321,0.00, LocalDateTime.now());
+                    System.out.println("You have Selected "+js.getName());
+                    System.out.println("Choose an Account to Manage for Mr. "+js.getName());
+                    System.out.println("  1. Personal Account");
+                    System.out.println("  2. Business Account");
+                    System.out.println("  3. ISA Account");
 
-                        System.out.println("\n");
+                    choice = (char) System.in.read();
+                } while( choice < '1' || choice > '3');
+
+
+
+
 
                         switch(choice) {
                             case '1':
@@ -52,7 +57,7 @@ public class Menu {
 
                 break;
             case '2':
-                PersonalAccount bj=new PersonalAccount("Boris Johnson",010506,87654321,0.00);
+                PersonalAccount bj=new PersonalAccount("Boris Johnson",010506,87654321,0.00,LocalDateTime.now());
                 System.out.println("You have Selected "+bj.getName());
 
 
@@ -72,7 +77,7 @@ public class Menu {
 
                 break;
             case '3':
-                PersonalAccount dt=new PersonalAccount("Donald Trump",010506,87654321,0.00);
+                PersonalAccount dt=new PersonalAccount("Donald Trump",010506,87654321,0.00,LocalDateTime.now());
                 System.out.println("You have Selected "+dt.getName());
 
 
@@ -90,7 +95,7 @@ public class Menu {
 
                 break;
             case '4':
-                PersonalAccount bo=new PersonalAccount("Barak Obama",010506,87654321,0.00);
+                PersonalAccount bo=new PersonalAccount("Barak Obama",010506,87654321,0.00,LocalDateTime.now());
                 System.out.println("You have Selected "+bo.getName());
 
 
@@ -112,7 +117,7 @@ public class Menu {
                 break;
 
             case '5':
-                PersonalAccount hc=new PersonalAccount("Hilary Clinton",010506,87654321,0.00);
+                PersonalAccount hc=new PersonalAccount("Hilary Clinton",010506,87654321,0.00,LocalDateTime.now());
                 System.out.println("You have Selected "+hc.getName());
 
 

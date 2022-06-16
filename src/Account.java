@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 
 public class Account {
     String name;
@@ -5,12 +6,18 @@ public class Account {
     int accountNumber=00000000;
     double balance=0;
 
+    public LocalDateTime openingTime;
 
-    public Account(String name, int sortCode, int accountNumber, double balance) {
+    public LocalDateTime getOpeningTime() {
+        return openingTime;
+    }
+
+    public Account(String name, int sortCode, int accountNumber, double balance, LocalDateTime openingTime) {
         this.name = name;
         this.sortCode = sortCode;
         this.accountNumber = accountNumber;
         this.balance = balance;
+        this.openingTime=LocalDateTime.now();
     }
 
     public String getName() {
