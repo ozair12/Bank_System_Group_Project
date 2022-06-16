@@ -7,5 +7,10 @@ public class App {
         System.out.println(pc.getOpeningTime());
 
         System.out.println(pc.getOpeningTime());
+        pc.addMoney(100);
+        System.out.println("Your balance is "+pc.getBalance());
+        pc.withdrawMoney(20);
+        System.out.println("Your balance is "+pc.getBalance());
+
     }
 }
