@@ -15,8 +15,9 @@ public class App {
         pc.withdrawMoney(20);
         System.out.println("Your balance is "+pc.getBalance());
         pc.setStatement(LocalDateTime.now(), pc.balance);
-        System.out.print("Your balance is " + pc.getStatement());
+        System.out.println("Your balance is " + pc.getStatement());
         //adding a comment line to do new commit
+        System.out.println("Printing Account Statement for "+pc.getName() +"\n  "  + pc.getStatement());
 
 
     }
