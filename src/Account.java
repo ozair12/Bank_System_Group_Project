@@ -1,16 +1,15 @@
 import java.time.LocalDateTime;
+import java.util.HashMap;
 
 public class Account {
     String name;
     int sortCode=000000;
     int accountNumber=00000000;
-    double balance=0;
+    double balance;
 
     public LocalDateTime openingTime;
+    private   HashMap<LocalDateTime,Double> statement;
 
-    public LocalDateTime getOpeningTime() {
-        return openingTime;
-    }
 
     public Account(String name, int sortCode, int accountNumber, double balance, LocalDateTime openingTime) {
         this.name = name;
@@ -18,6 +17,11 @@ public class Account {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.openingTime=LocalDateTime.now();
+        statement= new HashMap<>();
+        statement.put(openingTime,balance);
+    }
+    public LocalDateTime getOpeningTime() {
+        return openingTime;
     }
 
     public String getName() {
@@ -48,7 +52,7 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -60,5 +64,12 @@ public class Account {
             System.out.println("Can't Withdraw due to low balance");
         }
         else balance -= amount;
+    }
+    public HashMap<LocalDateTime,Double> getStatement(){
+        return statement;
+
+    }
+    public void setStatement(LocalDateTime time,Double balance){
+        statement.put(time, balance);
     }
 }
