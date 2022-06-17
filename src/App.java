@@ -16,6 +16,7 @@ public class App {
         System.out.println("Your balance is "+pc.getBalance());
         pc.setStatement(LocalDateTime.now(), pc.balance);
         System.out.print("Your balance is " + pc.getStatement());
+        //adding a comment line to do new commit
 
 
     }
