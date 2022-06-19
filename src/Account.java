@@ -1,16 +1,19 @@
 
 public class Account {
     String name;
-    int sortCode=000000;
-    int accountNumber=00000000;
+    String sortCode= " ";
+    int accountNumber=0;
     double balance=0;
 
 
-    public Account(String name, int sortCode, int accountNumber, double balance) {
+    public Account(String name, String sortCode, int accountNumber, double balance) {
         this.name = name;
         this.sortCode = sortCode;
         this.accountNumber = accountNumber;
         this.balance = balance;
+    }
+
+    public Account() {
     }
 
     public String getName() {
@@ -21,11 +24,11 @@ public class Account {
         this.name = name;
     }
 
-    public int getSortCode() {
+    public String getSortCode() {
         return sortCode;
     }
 
-    public void setSortCode(int sortCode) {
+    public void setSortCode(String sortCode) {
         this.sortCode = sortCode;
     }
 
@@ -41,7 +44,10 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
+
+
+
 }
