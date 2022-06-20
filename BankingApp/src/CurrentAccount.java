@@ -48,7 +48,7 @@ public class CurrentAccount extends Customer {  // Current account will extend C
 
 
     public void showBalance(){    // method to show the current balance
-        System.out.println("The customers` balance is: " + getBalance());
+        System.out.println("The customers` balance in current account is: " + getBalance());
     }
 
     public void depositMoney(int amount) {    // method for depositing money into the account

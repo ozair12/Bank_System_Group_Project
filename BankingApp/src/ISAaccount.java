@@ -46,7 +46,7 @@ public class ISAaccount extends Customer {
     }
 
     public void showBalance(){               // method to show the current balance
-        System.out.println("The customers` balance is: " + getBalance());
+        System.out.println("The customers` balance in ISA account is: " + getBalance());
     }
 
     public void checkBalance() {
@@ -66,8 +66,11 @@ public class ISAaccount extends Customer {
         System.out.println(balance = balance - amount);
     }
 
-    public void addInterest() {
-        // method for incrementing the balance by 2% between 31st March and 1st April
+    public void addInterest() { // method for incrementing the balance by 2% between 31st March and 1st April
+        double interest = .02;
+        System.out.print("Customers` ISA balance after interest is: ");
+        System.out.println(balance = (balance * interest) + balance);
+
     }
 
     public void transferMoney(){
