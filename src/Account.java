@@ -59,7 +59,7 @@ public class Account {
     public void addMoney(int amount){
         balance+=amount;
     }
-    public void withdrawMoney(int amount){
+    public void withdrawMoney(double amount){
         if (balance<=0|| amount>balance){
             System.out.println("Can't Withdraw due to low balance");
         }
