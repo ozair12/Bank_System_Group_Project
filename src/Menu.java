@@ -21,9 +21,9 @@ public class Menu {
             System.out.println("Choose one:");
             choice = (char) System.in.read();
         } while( choice < '1' || choice > '2');
-        
 
-       // System.out.println("\n");
+
+        // System.out.println("\n");
 
         switch(choice) {
             case '1':
@@ -44,77 +44,77 @@ public class Menu {
 
 
 
+                switch(choice) {
+                    case '1':
+                        do {
+                            System.out.println("Type a Number Associated with Action on  "+JSPA.getName()+"'s Personal Account");
+                            System.out.println("  1. Add Money");
+                            System.out.println("  2. Withdraw Money");
+                            System.out.println("  3. Check Balance");
+                            System.out.println("  4. Transfer Money");
+                            System.out.println("  5. Display Statement");
+
+                            System.out.println("Choose one:");
+                            choice = (char) System.in.read();
+                        } while( choice < '1' || choice > '5');
+
+                        System.out.println("\n");
+
                         switch(choice) {
                             case '1':
-                                do {
-                                    System.out.println("Type a Number Associated with Action on  "+JSPA.getName()+"'s Personal Account");
-                                    System.out.println("  1. Add Money");
-                                    System.out.println("  2. Withdraw Money");
-                                    System.out.println("  3. Check Balance");
-                                    System.out.println("  4. Transfer Money");
-                                    System.out.println("  5. Display Statement");
+                                System.out.println("Enter the Amount to deposit in floating point Number.");
+                                double val= sc.nextDouble();
+                                JSPA.setBalance(val);
+                                JSPA.setStatement(LocalDateTime.now(), JSPA.balance);
+                                System.out.println("The account balance after deposit is "+JSPA.getBalance());
 
-                                    System.out.println("Choose one:");
-                                    choice = (char) System.in.read();
-                                } while( choice < '1' || choice > '5');
-
-                                System.out.println("\n");
-
-                                switch(choice) {
-                                    case '1':
-                                        System.out.println("Enter the Amount to deposit in floating point Number.");
-                                        double val= sc.nextDouble();
-                                        JSPA.setBalance(val);
-                                        JSPA.setStatement(LocalDateTime.now(), JSPA.balance);
-                                        System.out.println("The account balance after deposit is "+JSPA.getBalance());
-
-                                        break;
-                                    case '2':
-                                        System.out.println("Enter the Amount to withdraw in floating point Number.");
-                                        double out= sc.nextDouble();
-                                        JSPA.withdrawMoney(out);
-                                        JSPA.setStatement(LocalDateTime.now(), JSPA.balance);
-                                        System.out.println("The account balance after withdrawal is "+JSPA.getBalance());
-                                        break;
-                                    case '3':
-                                        System.out.println("Current Balance on the account is "+JSPA.getBalance());
-                                        break;
-                                    case '4':
-                                        System.out.println("do-while:\n");
-                                        break;
-                                    case '5':
-                                        System.out.println("Printing Account Statement for "+JSPA.getName() +"\n  "  + JSPA.getStatement());
-                                        break;
-
-                                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                System.out.println("if\n");
                                 break;
                             case '2':
-                                System.out.println("switch:\n");
+                                System.out.println("Enter the Amount to withdraw in floating point Number.");
+                                double out= sc.nextDouble();
+                                JSPA.withdrawMoney(out);
+                                JSPA.setStatement(LocalDateTime.now(), JSPA.balance);
+                                System.out.println("The account balance after withdrawal is "+JSPA.getBalance());
                                 break;
                             case '3':
-                                System.out.println("while:\n");
+                                System.out.println("Current Balance on the account is "+JSPA.getBalance());
+                                break;
+                            case '4':
+                                System.out.println("do-while:\n");
+                                break;
+                            case '5':
+                                System.out.println("Printing Account Statement for "+JSPA.getName() +"\n  "  + JSPA.getStatement());
                                 break;
 
                         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        System.out.println("if\n");
+                        break;
+                    case '2':
+                        System.out.println("switch:\n");
+                        break;
+                    case '3':
+                        System.out.println("while:\n");
+                        break;
+
+                }
 
 
 

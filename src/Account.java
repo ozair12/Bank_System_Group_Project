@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Account {
@@ -66,8 +67,10 @@ public class Account {
         else balance -= amount;
     }
     public HashMap<LocalDateTime,Double> getStatement(){
-        return statement;
+        //return Arrays.asList(statement);
+        //System.out.println();
 
+        return statement;
     }
     public void setStatement(LocalDateTime time,Double balance){
         statement.put(time, balance);

@@ -9,9 +9,7 @@ public class PersonalAccount extends Account {
         this.sortCode=sortCode;
         this.accountNumber=accountNumber;
         this.balance=balance;
-        statement= new HashMap<>();
-        statement.put(openingTime,balance);
-
+        this.setStatement(openingTime,balance);
     }
 
 
