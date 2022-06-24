@@ -56,12 +56,12 @@ public class Menu implements Serializable {
             FileInputStream readData = new FileInputStream("accData.ser");
             ObjectInputStream readStream = new ObjectInputStream(readData);
 
-            ArrayList Acc2 = (ArrayList<Account>) readStream.readObject();
+            ArrayList<Account> Acc2 = (ArrayList<Account>) readStream.readObject();
 
 
 
             System.out.println(Acc2.get(0).toString());
-            //System.out.println(Acc2.get(0).addMoney(100.0));// Hi, my problem is the methods defined in accounts is not working here, although toSring worked
+            System.out.println(Acc2.get(0).getStatement());// Hi, my problem is the methods defined in accounts is not working here, although toSring worked
             readStream.close();
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
