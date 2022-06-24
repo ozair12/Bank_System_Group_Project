@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
 
-public class ISAAccount extends Account{
+public class ISAAccount extends Account implements Serializable {
 
     private HashMap<LocalDateTime,Double> statement;
     public ISAAccount(String name, int sortCode, int accountNumber, double balance, LocalDateTime openingTime) {

@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Arrays;
+
 import java.util.HashMap;
 
-public class Account {
+public class Account implements Serializable {
     String name;
     int sortCode=000000;
     int accountNumber=00000000;
@@ -12,7 +13,7 @@ public class Account {
     private   HashMap<LocalDateTime,Double> statement;
 
 
-    public Account(String name, int sortCode, int accountNumber, double balance, LocalDateTime openingTime) {
+    public Account (String name, int sortCode, int accountNumber, double balance, LocalDateTime openingTime) {
         this.name = name;
         this.sortCode = sortCode;
         this.accountNumber = accountNumber;
@@ -20,6 +21,9 @@ public class Account {
         this.openingTime=LocalDateTime.now();
         statement= new HashMap<>();
         statement.put(openingTime,balance);
+    }
+    public String toString(){
+        return "Account Name: " + this.name+ ". Account Type: " + this.getClass()+ ". Balance: " +this.getBalance();
     }
     public LocalDateTime getOpeningTime() {
         return openingTime;
@@ -57,7 +61,7 @@ public class Account {
         this.balance = balance;
     }
 
-    public void addMoney(int amount){
+    public void addMoney(double amount){
         balance+=amount;
     }
     public void withdrawMoney(double amount){

@@ -24,6 +24,8 @@ public class App {
         //System.out.println("Your Current Charges "+ba.getCharges());
         System.out.println("Printing Business Account Statement for "+ba.getName() +"\n  "  + ba.getStatement());
         System.out.println("ISA Account Statement for "+ia.getName() +"\n  "  + ia.getStatement());
+        ba.addAccCharge(25.0);
+        System.out.println("Business account charges"+ba.getCharges());
 
 
     }
